@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">  
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Signup</h1>
+    <p id="error-message"></p>
+
+    <!-- Signup form -->
+    <form id="form" action="/signup" method="POST" enctype="multipart/form-data">
+      <div>
+        <label for="firstname-input">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/>
+          </svg>
+        </label>
+        <input type="text" name="username" id="firstname-input" placeholder="Username" required>
+      </div>
+
+      <div>
+        <label for="email-input">
+          <span>@</span>
+        </label>
+        <input type="email" name="email" id="email-input" placeholder="Email" required>
+      </div>
+
+      <div>
+        <label for="phone-input">
+          <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+        </label>
+        <input type="text" name="phone" id="phone-input" placeholder="Phone" required>
+      </div>
+
+      <div>
+        <label for="password-input">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/>
+          </svg>
+        </label>
+        <input type="password" name="password" id="password-input" placeholder="Password" required>
+      </div>
+
+      <div>
+        <label for="profileImage">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M479-80q-144 0-247-103T129-430q0-145 103-248t247-103q144 0 247 103t103 248q0 144-103 247T479-80Zm0-60q125 0 212-87t87-212q0-125-87-212t-212-87q-125 0-212 87t-87 212q0 125 87 212t212 87Zm-90-167q0 28 19 47t47 19q28 0 47-19t19-47q0-28-19-47t-47-19q-28 0-47 19t-19 47Zm89-293q26 0 44.5-18.5T541-659q0-26-18.5-44.5T478-722q-26 0-44.5 18.5T415-659q0 26 18.5 44.5T478-540ZM279-270h400v-17q0-31-15-60.5T618-383q-41-23-85-33.5T478-427q-46 0-90 10.5T303-383q-37 21-52 50.5T236-287v17Z"/></svg>
+        </label>
+        <input type="file" name="profileImage" id="profileImage" accept="image/*" required>
+      </div>
+
+      <button type="submit">Signup</button>
+    </form>
+    
+    <p>Already have an Account? <a href="/login">Login</a></p>
+  </div>
+</body>
+</html>

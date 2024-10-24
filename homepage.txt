@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome, <%= user.username %>!</h1>
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <p><strong>Phone:</strong> <%= user.phone %></p>
+        <p><strong>School:</strong> <%= user.school %></p>
+        <p><strong>Class:</strong> <%= user.class %></p>
+        <p><strong>Section:</strong> <%= user.section %></p>
+        <p><strong>Hobbies:</strong> <%= Array.isArray(user.hobbies) ? user.hobbies.join(', ') : 'No hobbies listed' %></p>
+
+        <img src="<%= user.profileImage %>" alt="Profile Image" />
+        <p><a href="/logout">Logout</a></p>
+    </div>
+</body>
+</html>
